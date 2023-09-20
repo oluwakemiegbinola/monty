@@ -17,28 +17,7 @@
  */
  
 
- typedef struct var_s
-{
-	int queue;
-	size_t stack_len;
-} var_t;
-
-#define STACK 0
-#define QUEUE 1
-
-typedef struct stack_s
-{
-	int n;
-	struct stack_s *prev;
-	struct stack_s *next;
-} stack_t;
-
-
 void m_add(stack_t **stack, unsigned int line_number);
-
-
-void m_fs_close(int status, void *arg);
-void free_lineptr(int status, void *arg);
-stack_t *add_node(stack_t **stack, const int n);
+void free_lineptr(int status, void *arg)
 
 #endif /* _MONTY_H_ */
