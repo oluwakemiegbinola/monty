@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include "monty.h"
 /**
- * Valid in C99 and lateri
  * This is main.c file
  * main.c file with important task
  */
