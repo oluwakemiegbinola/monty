@@ -11,11 +11,6 @@
 #include <stdarg.h>
 
 /**
- * int main(int argc, char *argv[]) {
- * argc is the count of command-line arguments
- * argv is an array of strings containing the arguments
- */
-/**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
  * @prev: points to the previous element of the stack (or queue)
@@ -29,8 +24,7 @@ typedef struct stack_s
         int n;
         struct stack_s *prev;
         struct stack_s *next;
-} stack_t; 
-
+} stack_t;
 
 /**
  * struct instruction_s - opcode and its function
@@ -40,16 +34,12 @@ typedef struct stack_s
  * Description: opcode and its function
  * for stack, queues, LIFO, FIFO
  */
+
 typedef struct instruction_s
 {
         char *opcode;
-        void (*f)(stack_t **stack, unsigned int line_number);
+ 
+ 	void (*f)(stack_t **stack, unsigned int line_number);
+        void m_add(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-
-
-
-void m_add(stack_t **stack, unsigned int line_number);
-void free_lineptr(int status, void *arg)
-
-#endif /* _MONTY_H_ */
